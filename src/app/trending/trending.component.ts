@@ -1,5 +1,7 @@
+import { CatalogAPIService } from './../catalog-api.service';
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from '../restaurant';
+import { Catalog } from '../catalog';
 
 @Component({
   selector: 'app-trending',
@@ -9,8 +11,9 @@ import { Restaurant } from '../restaurant';
 export class TrendingComponent implements OnInit {
 
    trendingList: Restaurant[];
+     icecreamList: Catalog[];
 
-  constructor() {
+  constructor(private service: CatalogAPIService) {
 
      const karachibakery = {id: 101, name: 'Karachi Bakery',
      status: 'open' , rating: 4.5,
@@ -30,6 +33,8 @@ export class TrendingComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    this.service.findAll().subscribe(data => this.icecreamList = data);
   }
 
 }
