@@ -12,6 +12,8 @@ import { OrderComponent } from './order/order.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ConfirmOrderComponent } from './confirm-order/confirm-order.component';
+import { DistributorsComponent } from './distributors/distributors.component';
+import { SalesmenComponent } from './salesmen/salesmen.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { ConfirmOrderComponent } from './confirm-order/confirm-order.component';
     OrderComponent,
     ParentComponent,
     ChildComponent,
-    ConfirmOrderComponent
+    ConfirmOrderComponent,
+    DistributorsComponent,
+    SalesmenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, HttpClientModule, FormsModule
   ],
   providers: [HttpClient],
-  bootstrap: [AppComponent]
+  bootstrap: [ ParentComponent]
 })
 export class AppModule { }
