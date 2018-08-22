@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-salesmen',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesmenComponent implements OnInit {
 
+  @Input() param: number;
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +15,12 @@ export class SalesmenComponent implements OnInit {
 
   getSalesMen(): string[] {
 
-    return ['reddy', 'kartik', 'nair', 'khanna'];
+     if (this.param === 1) {
+      return ['reddy', 'kartik', 'nair', 'khanna'];
+     } else {
+      return ['mani', 'gautam', 'meena', 'nana'];
+
+     }
 
   }
 }
