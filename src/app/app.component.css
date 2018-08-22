@@ -4,3 +4,13 @@
     color: #ffffff;
     font-size: 1.6em;
 }
+
+.botFooter {
+    background-color: #a52a2a;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.content {
+    background-image: linear-gradient(grey, green, grey)
+}

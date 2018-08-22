@@ -1,0 +1,6 @@
+<label>Medicine</label>
+<input type="text" [(ngModel)]='name'>
+<p>
+    <app-child [itemToAdd]='name' (result)='onChange($event)'></app-child>
+</p>
+{{response}}

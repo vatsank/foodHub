@@ -1,0 +1,20 @@
+<div class='form-group col-md-4'>
+    <label>Item To Add</label>
+    <input type='text' [(ngModel)]='item' class='form-control'>
+    <button (click)='submit()' class='btn btn-lg fa fa-plus'>Add </button>
+    <span style='margin: 10px;'></span>
+    <button (click)='checkout()' class='btn btn-lg fa fa-check'>Chekout</button>
+
+</div>
+
+<h4>My Cart</h4>
+<ol>
+    <li *ngFor="let eachItem of itemList">
+        {{eachItem}}
+    </li>
+</ol>
+
+<div *ngIf='send'>
+    <app-confirm-order [items]='itemList' (result)='onchange($event)'></app-confirm-order>
+    <p>{{response}}</p>
+</div>

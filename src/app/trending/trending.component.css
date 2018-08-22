@@ -4,3 +4,7 @@ img {
     border: 1px solid #ff0000;
     border-radius: 1px solid #aa0000;
 }
+
+.card {
+    width: 200px;
+}
