@@ -41,6 +41,6 @@ import { DetailsComponent } from './details/details.component';
   ],
   providers: [HttpClient],
   entryComponents: [DetailsComponent],
-  bootstrap: [ ParentComponent, SiblingComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -43,5 +43,6 @@ export class ParentComponent implements OnInit,AfterContentInit {
   ngAfterContentInit(): void {
     this.showDetails();
     console.log(this.slist);
+
   }
 }

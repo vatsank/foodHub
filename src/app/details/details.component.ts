@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
+  shippingDetails: string[];
   constructor() { }
 
   ngOnInit() {

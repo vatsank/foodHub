@@ -43,5 +43,24 @@
         "meals": ["pasta", "burger", "coke"],
         "amount": 450.00,
         "delivered": true
-    }]
+    }],
+    "myorders": [{
+            "id": 600,
+            "date": "2018-08-20",
+            "value": 450.00,
+            "type": "breakfast"
+        },
+        {
+            "id": 601,
+            "date": "2018-08-22",
+            "value": 1450.00,
+            "type": "lunch"
+        },
+        {
+            "id": 602,
+            "date": "2018-08-22",
+            "value": 450.00,
+            "type": "breakfast"
+        }
+    ]
 }
