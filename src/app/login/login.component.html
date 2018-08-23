@@ -1,0 +1,21 @@
+<form #frm='ngForm' ngNativeValidate (ngSubmit)='submit(frm.value)'>
+
+    <div>
+        <label for="userName">User Name</label>
+        <input type="text" name='userName' [(ngModel)]='user.userName' required>
+    </div>
+
+    <div>
+        <label for="role">Role</label>
+        <input type="text" name='role' [(ngModel)]='user.role'>
+    </div>
+
+    <div>
+        <label for="pwd">pass Word</label>
+        <input type="password" name='passWord' id='pwd' [(ngModel)]='user.passWord' required>
+    </div>
+    <div>
+        <input type="submit" value="login" [disabled]='frm.invalid'>
+    </div>
+</form>
+{{user|json}}

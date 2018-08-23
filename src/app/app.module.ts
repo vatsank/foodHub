@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +20,9 @@ import { SiblingComponent } from './sibling/sibling.component';
 import { HightLightDirective } from './hight-light.directive';
 import { DetailsComponent } from './details/details.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { FilterPipe } from './filter.pipe';
+import { LoginComponent } from './login/login.component';
+import { RestrauntComponent } from './restraunt/restraunt.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +40,14 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
     SiblingComponent,
     HightLightDirective,
     DetailsComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    FilterPipe,
+    LoginComponent,
+    RestrauntComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule
+    AppRoutingModule, HttpClientModule, ReactiveFormsModule ,FormsModule
   ],
   providers: [HttpClient],
   entryComponents: [DetailsComponent],

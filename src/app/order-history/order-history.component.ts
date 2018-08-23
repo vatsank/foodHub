@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-history.component.css']
 })
 export class OrderHistoryComponent implements OnInit {
-
+  srchCondition = '';
   orderHistory: OrderHistory[];
   constructor(private service: CatalogAPIService) { }
 
@@ -17,5 +17,7 @@ export class OrderHistoryComponent implements OnInit {
     this.service.getOrderHistory().subscribe(
        resp => this.orderHistory = resp);
   }
-
+  show(evnt:any){
+   console.log(evnt.target.id);
+  }
 }

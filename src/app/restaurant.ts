@@ -3,3 +3,4 @@ export interface Restaurant {
   status: string; image: string;
   rating: number;
 }
+

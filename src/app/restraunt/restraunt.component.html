@@ -1,0 +1,54 @@
+<div class='col-md-6' *ngIf='showForm'>
+    <form [formGroup]='restForm' (ngSubmit)='submit()'>
+
+        <div class='form-group'>
+            <label for="">Id</label>
+            <input type="text" formControlName="id" class='form-control'>
+        </div>
+        <div class='form-group'>
+            <label for="">Hotel Name</label>
+            <input type="text" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Description</label>
+            <input type="text" formControlName="description" class="form-control">
+        </div>
+        <div class='form-group '>
+            <label for="">Cusine Type</label>
+            <input type="text" formControlName="cuisine" class='form-control'>
+        </div>
+        <div class=' form-group '>
+            <label for="">Photo File</label>
+            <input type="text" formControlName="photo" class="form-control">
+        </div>
+        <div class=' form-group '>
+            <label for="">Price Level</label>
+            <input type="text" formControlName="priceLevel" class="form-control">
+        </div>
+        <div class=' form-group '>
+            <label for="">Email</label>
+            <input type="email" formControlName="owner_email" class="form-control">
+        </div>
+
+        <input type="submit" value="Add">
+
+    </form>
+
+</div>
+
+<div>
+    <table class='table table-striped'>
+        <tr>
+            <td colspan='6'><button class='fa fa-plus-square' (click)='changeFormStatus()'></button></td>
+        </tr>
+        <tr *ngFor='let eachItem of list'>
+            <td>{{eachItem.name}}</td>
+            <td>{{eachItem.description}}</td>
+            <td>{{eachItem.cuisine}}</td>
+            <td>{{eachItem.priceLevel}}</td>
+            <td><button class='fa fa-edit' (click)='edit(eachItem)'></button></td>
+            <td><button class='fa fa-remove' (click)='remove(eachItem)'></button></td>
+
+        </tr>
+    </table>
+</div>

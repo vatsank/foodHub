@@ -1,5 +1,6 @@
+import { RestaurantInfo } from './restaurant-info';
 import { Catalog } from './catalog';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OrderHistory } from './order-history';
@@ -18,10 +19,45 @@ export class CatalogAPIService {
     return this.http.get<Catalog[]>(this.baseURL + 'icecream');
   }
 
+
+  findAllRestaurants(): Observable<RestaurantInfo[]> {
+
+    return this.http.get<RestaurantInfo[]>(this.baseURL + 'restaurant');
+  }
+
   getOrderHistory(): Observable<OrderHistory[]> {
+
 
     return this.http.get<OrderHistory[]>(this.baseURL
                   + 'myorders');
 
   }
+
+  addRestaurant(obj: RestaurantInfo): Observable<RestaurantInfo> {
+
+  const headers =
+     new HttpHeaders().
+         set('content-type', 'application/json');
+
+    return this.http.post<RestaurantInfo>
+              (this.baseURL + 'restaurant',
+                obj, {headers});
+
+  }
+
+  removeRestaurant(id: any): Observable<RestaurantInfo> {
+
+          return this.http.delete<RestaurantInfo>
+                (this.baseURL + 'restaurant/' + id);
+
+    }
+
+    updateRestaurant(obj: RestaurantInfo): Observable<RestaurantInfo> {
+
+      const headers =
+     new HttpHeaders().
+         set('content-type', 'application/json');
+   return this.http.put<RestaurantInfo>
+                (this.baseURL + 'restaurant/' + obj.id, obj, {headers});
+    }
 }

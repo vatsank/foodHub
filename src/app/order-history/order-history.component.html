@@ -1,13 +1,15 @@
-<table class='table table-striped'>
+<input type='search' [(ngModel)]="srchCondition" (keypress)='show($event)'>
+<span class='fa fa-search' style='transform: translate(-20px)'></span>
+<table class='table table-striped '>
     <tr>
         <th>Order No</th>
         <th>Order Date</th>
         <th>Order Value</th>
         <th>Food Type</th>
-        <tr *ngFor='let eachOrder of  orderHistory'>
+        <tr *ngFor="let eachOrder of  orderHistory | filter :'type':srchCondition">
             <td>{{eachOrder.id}}</td>
-            <td>{{eachOrder.date | date:'fullDate'}}</td>
-            <td>{{eachOrder.value |currency:'INR':'symbol':'3.2-2' }}</td>
+            <td>{{eachOrder.date | date:"medium"}}</td>
+            <td>{{eachOrder.value |currency:"INR":"symbol":"3.2-2" }}</td>
             <td>{{eachOrder.type | uppercase}}</td>
         </tr>
 
