@@ -2,6 +2,7 @@ import { Catalog } from './catalog';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { OrderHistory } from './order-history';
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +16,12 @@ export class CatalogAPIService {
   findAll(): Observable<Catalog[]> {
 
     return this.http.get<Catalog[]>(this.baseURL + 'icecream');
+  }
+
+  getOrderHistory(): Observable<OrderHistory[]> {
+
+    return this.http.get<OrderHistory[]>(this.baseURL
+                  + 'myorders');
+
   }
 }

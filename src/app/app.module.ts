@@ -17,6 +17,7 @@ import { SalesmenComponent } from './salesmen/salesmen.component';
 import { SiblingComponent } from './sibling/sibling.component';
 import { HightLightDirective } from './hight-light.directive';
 import { DetailsComponent } from './details/details.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DetailsComponent } from './details/details.component';
     SalesmenComponent,
     SiblingComponent,
     HightLightDirective,
-    DetailsComponent
+    DetailsComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,
