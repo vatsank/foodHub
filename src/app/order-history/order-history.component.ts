@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class OrderHistoryComponent implements OnInit {
   srchCondition = '';
   orderHistory: OrderHistory[];
+  p = 1;
   constructor(private service: CatalogAPIService) { }
 
   ngOnInit() {

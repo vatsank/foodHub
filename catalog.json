@@ -1,105 +1,120 @@
 {
-  "icecream": [
-    {
-      "id": 1,
-      "name": "vannila",
-      "ratePerUnit": 45,
-      "image": "assets/images/vannila.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Butter scotch",
-      "ratePerUnit": 75,
-      "image": "assets/images/butterscoth.jpg"
-    }
-  ],
-  "southIndian": [
-    {
-      "id": 200,
-      "name": "idly",
-      "ratePerUnit": 23,
-      "image": "southindian/idly.jpg"
-    }
-  ],
-  "northIndian": [
-    {
-      "id": 300,
-      "name": "parantha",
-      "ratePerUnit": 33,
-      "image": "northindian/parantha.jpg"
-    }
-  ],
-  "restaurant": [
-    {
-      "id": 400,
-      "name": "Karachi Bakery India Pvt Ltd",
-      "description": "Traditional Restaraunt",
-      "cuisine": "Multi Cuisine ",
-      "photo": "assets/images/karchi.jpg",
-      "priceLevel": "budget",
-      "owner_email": "abc@gmail.com"
-    },
-    {
-      "id": "402",
-      "name": "Pulla Reddy",
-      "description": "sweet shop",
-      "cuisine": "casual dinining",
-      "photo": "assets/images/pulla.jpg",
-      "priceLevel": "moderate",
-      "owner_email": "pulla@abc.com"
-    },
-    {
-      "id": "405",
-      "name": "Nandini",
-      "description": "Ethnic",
-      "cuisine": "South Indian",
-      "photo": "assets/images/nandini.jpg",
-      "priceLevel": "moderate",
-      "owner_email": "nandini@gmail.com"
-    },
-    {
-      "id": "407",
-      "name": "Saravana",
-      "description": "casual dininig",
-      "cuisine": "Vegan",
-      "photo": "assets/photo/saravan.jpg",
-      "priceLevel": "moderate",
-      "owner_email": "sar@abv.com"
-    }
-  ],
-  "order": [
-    {
-      "id": 500,
-      "mobileNumber": 9404040,
-      "firstname": "Ramesh",
-      "address": "Chennai",
-      "meals": [
-        "pasta",
-        "burger",
-        "coke"
-      ],
-      "amount": 450,
-      "delivered": true
-    }
-  ],
-  "myorders": [
-    {
-      "id": 600,
-      "date": "2018-08-20",
-      "value": 450,
-      "type": "breakfast"
-    },
-    {
-      "id": 601,
-      "date": "2018-08-22",
-      "value": 1450,
-      "type": "lunch"
-    },
-    {
-      "id": 602,
-      "date": "2018-08-22",
-      "value": 450,
-      "type": "breakfast"
-    }
-  ]
+    "icecream": [{
+            "id": 1,
+            "name": "vannila",
+            "ratePerUnit": 45,
+            "image": "assets/images/vannila.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Butter scotch",
+            "ratePerUnit": 75,
+            "image": "assets/images/butterscoth.jpg"
+        }
+    ],
+    "southIndian": [{
+        "id": 200,
+        "name": "idly",
+        "ratePerUnit": 23,
+        "image": "southindian/idly.jpg"
+    }],
+    "northIndian": [{
+        "id": 300,
+        "name": "parantha",
+        "ratePerUnit": 33,
+        "image": "northindian/parantha.jpg"
+    }],
+    "restaurant": [{
+            "id": 400,
+            "name": "Karachi Bakery India Pvt Ltd",
+            "description": "Traditional Restaraunt",
+            "cuisine": "Multi Cuisine ",
+            "photo": "assets/images/karchi.jpg",
+            "priceLevel": "budget",
+            "owner_email": "abc@gmail.com"
+        },
+        {
+            "id": "402",
+            "name": "Pulla Reddy",
+            "description": "sweet shop",
+            "cuisine": "casual dinining",
+            "photo": "assets/images/pulla.jpg",
+            "priceLevel": "moderate",
+            "owner_email": "pulla@abc.com"
+        },
+        {
+            "id": "405",
+            "name": "Nandini",
+            "description": "Ethnic",
+            "cuisine": "South Indian",
+            "photo": "assets/images/nandini.jpg",
+            "priceLevel": "moderate",
+            "owner_email": "nandini@gmail.com"
+        },
+        {
+            "id": "407",
+            "name": "Saravana",
+            "description": "casual dininig",
+            "cuisine": "Vegan",
+            "photo": "assets/photo/saravan.jpg",
+            "priceLevel": "moderate",
+            "owner_email": "sar@abv.com"
+        }
+    ],
+    "order": [{
+        "id": 500,
+        "mobileNumber": 9404040,
+        "firstname": "Ramesh",
+        "address": "Chennai",
+        "meals": [
+            "pasta",
+            "burger",
+            "coke"
+        ],
+        "amount": 450,
+        "delivered": true
+    }],
+    "myorders": [{
+            "id": 600,
+            "date": "2018-08-20",
+            "value": 450,
+            "type": "breakfast"
+        },
+        {
+            "id": 601,
+            "date": "2018-08-22",
+            "value": 1450,
+            "type": "lunch"
+        },
+        {
+            "id": 602,
+            "date": "2018-08-22",
+            "value": 450,
+            "type": "breakfast"
+        },
+        {
+            "id": 603,
+            "date": "2018-08-24",
+            "value": 150,
+            "type": "dinner"
+        },
+        {
+            "id": 604,
+            "date": "2018-08-25",
+            "value": 4150,
+            "type": "lunch"
+        },
+        {
+            "id": 605,
+            "date": "2018-06-12",
+            "value": 550,
+            "type": "breakfast"
+        },
+        {
+            "id": 606,
+            "date": "2018-08-13",
+            "value": 550,
+            "type": "breakfast"
+        }
+    ]
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NavLink } from '../nav-link';
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  @Input() links: string[];
-  @Input() text: string[];
+  @Input() links: NavLink[];
 
   constructor() { }
 
