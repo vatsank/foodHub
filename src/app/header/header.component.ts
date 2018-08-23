@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   mainTitle = 'Food Hub';
-  pageHeadLinks = ['Restraunt', 'MyOrders', 'TrackOrder'];
-
+  pageHeadLinks = [
+                {link: '/home', text: 'Home'},
+                {link: '/hotels', text: 'Hotels'},
+                {link: '/placeOrder', text: 'Order Food'}
+                {link: '/history', text: 'Order History'},
+          {link: '/login', text: 'Login'}, ];
 
   constructor() { }
 

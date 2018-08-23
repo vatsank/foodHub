@@ -35,15 +35,18 @@ export class CatalogAPIService {
 
   addRestaurant(obj: RestaurantInfo): Observable<RestaurantInfo> {
 
-  const headers =
-     new HttpHeaders().
-         set('content-type', 'application/json');
+    const headers = new HttpHeaders().set('content-type', 'application/json');
+
+//          let headers = new HttpHeaders();
+// headers = headers.append('Authorization', 'Basic' + btoa('username:password'));
+// headers = headers.append('Content-Type', 'application/json');
 
     return this.http.post<RestaurantInfo>
               (this.baseURL + 'restaurant',
-                obj, {headers});
+                obj, {headers, withCredentials: true});
 
   }
+
 
   removeRestaurant(id: any): Observable<RestaurantInfo> {
 
@@ -61,3 +64,4 @@ export class CatalogAPIService {
                 (this.baseURL + 'restaurant/' + obj.id, obj, {headers});
     }
 }
+

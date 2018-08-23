@@ -47,6 +47,24 @@
       "photo": "assets/images/pulla.jpg",
       "priceLevel": "moderate",
       "owner_email": "pulla@abc.com"
+    },
+    {
+      "id": "405",
+      "name": "Nandini",
+      "description": "Ethnic",
+      "cuisine": "South Indian",
+      "photo": "assets/images/nandini.jpg",
+      "priceLevel": "moderate",
+      "owner_email": "nandini@gmail.com"
+    },
+    {
+      "id": "407",
+      "name": "Saravana",
+      "description": "casual dininig",
+      "cuisine": "Vegan",
+      "photo": "assets/photo/saravan.jpg",
+      "priceLevel": "moderate",
+      "owner_email": "sar@abv.com"
     }
   ],
   "order": [

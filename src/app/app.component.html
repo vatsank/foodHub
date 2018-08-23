@@ -2,22 +2,11 @@
 
     <div class='row topHead' style='height: 20%;'>
         <app-header></app-header>
-    </div>
-    <div class='row content' style='height: 60%;'>
-        <app-trending></app-trending>
-    </div>
-    <div class='row botFooter' style='height: 20%;'>
-        <app-footer></app-footer>
-    </div>
-</div>
-<div>
-    <app-order-history></app-order-history>
-</div>
 
-<div>
-    <app-login></app-login>
+    </div>
+    <div class='row content' style='height: 60%;'></div>
+    <router-outlet></router-outlet>
 </div>
-<div>
-    <app-restraunt></app-restraunt>
+<div class='row botFooter' style='height: 20%;'>
+    <app-footer></app-footer>
 </div>
-<router-outlet></router-outlet>

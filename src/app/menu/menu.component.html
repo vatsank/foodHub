@@ -1,6 +1,6 @@
 <nav>
     <ul>
         <li *ngFor='let eachlink of links'>
-            <a href='#'>{{eachlink}}</a></li>
+            <a [routerLink]="[eachlink.link]">{{eachlink.text}}</a></li>
     </ul>
 </nav>

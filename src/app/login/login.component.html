@@ -1,21 +1,22 @@
-<form #frm='ngForm' ngNativeValidate (ngSubmit)='submit(frm.value)'>
+<div class='col-md-6'>
+    <form #frm='ngForm' ngNativeValidate (ngSubmit)='submit(frm.value)'>
 
-    <div>
-        <label for="userName">User Name</label>
-        <input type="text" name='userName' [(ngModel)]='user.userName' required>
-    </div>
+        <div class='form-group'>
+            <label for="userName">User Name</label>
+            <input type="text" name='userName' [(ngModel)]='user.userName' required class='form-control'>
+        </div>
 
-    <div>
-        <label for="role">Role</label>
-        <input type="text" name='role' [(ngModel)]='user.role'>
-    </div>
+        <div class='form-group'>
+            <label for="role">Role</label>
+            <input type="text" name='role' [(ngModel)]='user.role' class='form-control'>
+        </div>
 
-    <div>
-        <label for="pwd">pass Word</label>
-        <input type="password" name='passWord' id='pwd' [(ngModel)]='user.passWord' required>
-    </div>
-    <div>
-        <input type="submit" value="login" [disabled]='frm.invalid'>
-    </div>
-</form>
-{{user|json}}
+        <div class='form-group'>
+            <label for="pwd">pass Word</label>
+            <input type="password" name='passWord' id='pwd' [(ngModel)]='user.passWord' required class='form-control'>
+        </div>
+        <div>
+            <input type="submit" value="login" [disabled]='frm.invalid' class='btn btn-danger'>
+        </div>
+    </form>
+</div>

@@ -1,7 +1,21 @@
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { RestrauntComponent } from './restraunt/restraunt.component';
+import { TrendingComponent } from './trending/trending.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '' , redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: TrendingComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'placeOrder' ,component: OrderComponent}
+  {path: 'hotels', component: RestrauntComponent},
+  {path: 'history', component: OrderHistoryComponent},
+  {path: '**', redirectTo: 'login'},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

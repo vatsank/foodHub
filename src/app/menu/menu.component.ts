@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   @Input() links: string[];
+  @Input() text: string[];
+
   constructor() { }
 
   ngOnInit() {
