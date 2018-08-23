@@ -14,6 +14,7 @@ export class RestrauntComponent implements OnInit {
   restForm: FormGroup;
   showForm = false;
   editMode =  false;
+  pos: number;
   constructor(private builder: FormBuilder,
         private service: CatalogAPIService) { }
 
@@ -36,8 +37,12 @@ export class RestrauntComponent implements OnInit {
      console.log(this.restForm.value);
 
      if (this.editMode) {
+
        this.service.updateRestaurant(this.restForm.value)
-               .subscribe(resp =>  console.log(resp));
+               .subscribe(resp => {
+                  this.list[this.pos] = resp;
+
+              });
      } else {
      this.service.addRestaurant(this.restForm.value).
           subscribe(resp => {
@@ -51,6 +56,8 @@ export class RestrauntComponent implements OnInit {
    }
 
       edit(val) {
+        this.pos = this.list.indexOf(val);
+
         this.showForm = true;
         this.restForm.setValue(val);
          this.editMode = true;
