@@ -30,6 +30,7 @@ import { FoodComponent } from './food/food.component';
 import { SouthfoodComponent } from './southfood/southfood.component';
 import { NorthfoodComponent } from './northfood/northfood.component';
 import { ShowMenuComponent } from './show-menu/show-menu.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ShowMenuComponent } from './show-menu/show-menu.component';
     FoodComponent,
     SouthfoodComponent,
     NorthfoodComponent,
-    ShowMenuComponent
+    ShowMenuComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

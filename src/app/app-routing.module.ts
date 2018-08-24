@@ -1,3 +1,4 @@
+import { LogoutComponent } from './logout/logout.component';
 import { SouthfoodComponent } from './southfood/southfood.component';
 import { FoodComponent } from './food/food.component';
 import { OrderComponent } from './order/order.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path: 'showItem/:code', component: ShowMenuComponent}
   ]},
   {path: 'hotels', component: RestrauntComponent},
+  {path: 'logout', component: LogoutComponent},
   {path: 'history', component: OrderHistoryComponent,
                      canActivate: [UniversalGuardGuard]},
   {path: '**', redirectTo: 'login'},

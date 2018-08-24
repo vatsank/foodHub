@@ -15,7 +15,8 @@ export class HeaderComponent implements OnInit {
                 {link: '/food', text: 'Cuisines'},
                 {link: '/placeOrder', text: 'Order Food'},
                 {link: '/history', text: 'Order History'},
-          {link: '/login', text: 'Login'} ];
+          {link: '/login', text: 'Login'}
+          ];
 
   constructor() { }
 
