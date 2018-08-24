@@ -2,6 +2,8 @@
     <ul>
         <li *ngFor='let eachlink of links'>
             <a [routerLink]="[eachlink.link]">{{eachlink.text}}</a></li>
+        <li><a [routerLink]="['/login']" *ngIf='showLogin'>Login</a></li>
+        <li><a [routerLink]="['/logout']" *ngIf='showLogout' style='color: magenta'>Logout</a></li>
     </ul>
 
 </nav>

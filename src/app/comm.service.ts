@@ -14,7 +14,6 @@ export class CommService {
  constructor() { }
 
    change(msg: string): void {
-
       this.message.next(msg);
    }
 }

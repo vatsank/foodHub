@@ -1,8 +1,10 @@
 <div style='display: flex ;flex-direction: row'>
 
     <div *ngFor='let eachItem of southMenu'>
-        <a [routerLink]="['/food/showItem',eachItem.code]">
+        <a [routerLink]="['/food/south/showItem',eachItem.code]">
             <img [src]='eachItem.type' class='img img-thumbnail'></a>
 
     </div>
 </div>
+
+<router-outlet></router-outlet>

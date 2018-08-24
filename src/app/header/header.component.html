@@ -1,5 +1,13 @@
-<p>
-    {{mainTitle}}
-</p>
-<button [routerLink]="['/logout']" class='btn btn-lg fa fa-sign-out'></button>
-<app-menu [links]='pageHeadLinks'></app-menu>
+<div class='row'>
+
+    <!-- </div> -->
+    <!-- <div class='col-md-4 text-right' *ngIf='show'>
+        <button [routerLink]="['/logout']" class='btn btn-lg fa fa-sign-out' style='float:right'></button> </div>
+</div> -->
+    <div class='col-md-12'>
+        {{mainTitle}}
+
+        <app-menu [links]='pageHeadLinks'></app-menu>
+
+    </div>
+</div>

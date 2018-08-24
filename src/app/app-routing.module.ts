@@ -19,10 +19,11 @@ const routes: Routes = [
   {path: 'login/:next', component: LoginComponent},
   {path: 'placeOrder' , component: OrderComponent},
   {path: 'food', component: FoodComponent, children: [
-    {path: 'south', component: SouthfoodComponent},
+    {path: 'south', component: SouthfoodComponent,children: [
+      {path: 'showItem/:code', component: ShowMenuComponent}
+    ]},
     {path: 'north', component: NorthfoodComponent},
-    {path: 'showItem/:code', component: ShowMenuComponent}
-  ]},
+      ]},
   {path: 'hotels', component: RestrauntComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'history', component: OrderHistoryComponent,

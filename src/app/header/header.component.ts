@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavLink } from '../nav-link';
+import { CommService } from '../comm.service';
 
 @Component({
   selector: 'app-header',
@@ -14,8 +15,8 @@ export class HeaderComponent implements OnInit {
                 {link: '/hotels', text: 'Hotels'},
                 {link: '/food', text: 'Cuisines'},
                 {link: '/placeOrder', text: 'Order Food'},
-                {link: '/history', text: 'Order History'},
-          {link: '/login', text: 'Login'}
+                {link: '/history', text: 'Order History'}
+
           ];
 
   constructor() { }
