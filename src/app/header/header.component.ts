@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   pageHeadLinks: NavLink[] = [
                 {link: '/home', text: 'Home'},
                 {link: '/hotels', text: 'Hotels'},
+                {link: '/food', text: 'Cuisines'},
                 {link: '/placeOrder', text: 'Order Food'},
                 {link: '/history', text: 'Order History'},
           {link: '/login', text: 'Login'} ];

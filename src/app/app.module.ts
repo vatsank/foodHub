@@ -26,6 +26,10 @@ import { OrderHistoryComponent } from './order-history/order-history.component';
 import { FilterPipe } from './filter.pipe';
 import { LoginComponent } from './login/login.component';
 import { RestrauntComponent } from './restraunt/restraunt.component';
+import { FoodComponent } from './food/food.component';
+import { SouthfoodComponent } from './southfood/southfood.component';
+import { NorthfoodComponent } from './northfood/northfood.component';
+import { ShowMenuComponent } from './show-menu/show-menu.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { RestrauntComponent } from './restraunt/restraunt.component';
     OrderHistoryComponent,
     FilterPipe,
     LoginComponent,
-    RestrauntComponent
+    RestrauntComponent,
+    FoodComponent,
+    SouthfoodComponent,
+    NorthfoodComponent,
+    ShowMenuComponent
   ],
   imports: [
     BrowserModule,

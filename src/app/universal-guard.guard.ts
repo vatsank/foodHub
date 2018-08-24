@@ -19,7 +19,7 @@ export class UniversalGuardGuard implements CanActivate {
 
       const reqURL =  state.url;
 
-       const reWriteURL =  reqURL.substr(1, reqURL.length));
+       const reWriteURL =  reqURL.substr(1, reqURL.length);
 
 
       let allow = false;
