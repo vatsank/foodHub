@@ -6,7 +6,9 @@
         <th>Order Date</th>
         <th>Order Value</th>
         <th>Food Type</th>
-        <tr *ngFor="let eachOrder of  orderHistory | filter :'type':srchCondition |paginate:{itemsPerPage:3,currentPage:p}">
+        <tr *ngFor="let eachOrder of  orderHistory
+        | filter :'type':srchCondition
+         |paginate:{itemsPerPage:3,currentPage:p}">
             <td>{{eachOrder.id}}</td>
             <td>{{eachOrder.date | date:"medium"}}</td>
             <td>{{eachOrder.value |currency:"INR":"symbol":"3.2-2" }}</td>

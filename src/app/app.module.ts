@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import {NgxPaginationModule} from 'ngx-pagination';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,7 +50,8 @@ import { RestrauntComponent } from './restraunt/restraunt.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, ReactiveFormsModule ,FormsModule, NgxPaginationModule
+    AppRoutingModule, HttpClientModule, ReactiveFormsModule ,
+       FormsModule, NgxPaginationModule
   ],
   providers: [HttpClient],
   entryComponents: [DetailsComponent],

@@ -5,14 +5,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RestrauntComponent } from './restraunt/restraunt.component';
 import { TrendingComponent } from './trending/trending.component';
+import { UniversalGuardGuard } from './universal-guard.guard';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: TrendingComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'placeOrder' ,component: OrderComponent},
+  {path: 'login/:next', component: LoginComponent},
+  {path: 'placeOrder' , component: OrderComponent},
   {path: 'hotels', component: RestrauntComponent},
-  {path: 'history', component: OrderHistoryComponent},
+  {path: 'history', component: OrderHistoryComponent,
+                     canActivate: [UniversalGuardGuard]},
   {path: '**', redirectTo: 'login'},
 
 ];
