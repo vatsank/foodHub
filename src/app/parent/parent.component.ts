@@ -1,26 +1,26 @@
 import { CommService } from './../comm.service';
 import { DistributorsComponent } from './../distributors/distributors.component';
 import { SalesmenComponent } from './../salesmen/salesmen.component';
-import { Component, OnInit, ViewChild, AfterContentInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterContentInit, ViewChildren, QueryList, AfterViewInit, ChangeDetectorRef, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent implements OnInit,AfterContentInit {
+export class ParentComponent implements OnInit, AfterViewInit {
 
 
   name = 'Crocin';
   response: string;
 
-  @ViewChildren(SalesmenComponent) slist: QueryList<SalesmenComponent>;
+  // @ViewChild(SalesmenComponent) slist: SalesmenComponent;
   @ViewChild(DistributorsComponent) distributors: DistributorsComponent;
-
+  @ViewChildren(SalesmenComponent) slist: QueryList<SalesmenComponent>;
   distList: string[];
   salesMenList: string[];
    resp: string;
-  constructor(private service: CommService) { }
+  constructor(private service: CommService,private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
 
@@ -40,9 +40,18 @@ export class ParentComponent implements OnInit,AfterContentInit {
 
   }
 
-  ngAfterContentInit(): void {
-    this.showDetails();
-    console.log(this.slist);
+  ngAfterViewInit(): void {
+
+    this.distList = this.distributors.getDistributors();
+
+    console.log(this.slist.first.param.innerHTML);
+    console.log(this.slist.last.param.innerHTML);
+
+    this.cd.detectChanges();
 
   }
 }
+
+// https://jaxenter.com/simplifying-viewchild-contentchild-angular-142894.html
+
+// https://netbasal.com/understanding-viewchildren-contentchildren-and-querylist-in-angular-896b0c689f6e

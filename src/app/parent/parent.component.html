@@ -1,14 +1,16 @@
 <label>Medicine</label>
 <input type="text" [(ngModel)]='name'>
 <p>
-    <app-child [itemToAdd]='name' (result)='onChange($event)'></app-child>
+    <!-- <app-child [itemToAdd]='name' (result)='onChange($event)'></app-child> -->
 </p>
 {{response}}
 
+<div #one>First</div>
+<div #two>Two</div>
+
 <app-distributors></app-distributors>
-<app-salesmen></app-salesmen>
-<app-salesmen></app-salesmen>
-<app-salesmen></app-salesmen>
+<app-salesmen [param]='one'></app-salesmen>
+<app-salesmen [param]='two'></app-salesmen>
 <p>{{distList}} </p>
 <p>{{salesMenList}}</p>
 

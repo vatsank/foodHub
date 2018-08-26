@@ -11,12 +11,21 @@
             <img src="{{eachItem.image}}" alt="logo" class='mx-auto d-block'>
         </div>
         <div class='card-body'>
-            <div>{{eachItem.rating}}</div>
-            <div>{{eachItem.status}}</div>
-        </div>
-    </div>
 
+            <ng-template #t let-fill="fill">
+                <span class="star" [class.full]="fill === 100">
+                  <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                </span>
+            </ng-template>
+
+
+
+            <ngb-rating [(rate)]=eachItem.rating [starTemplate]='t' [max]='5' [readonly]='true'></ngb-rating>
+        </div>
+        <div>{{eachItem.status}}</div>
+    </div>
 </div>
+
 <h3>Our Trending Food Items</h3>
 
 <div class="card-deck">
